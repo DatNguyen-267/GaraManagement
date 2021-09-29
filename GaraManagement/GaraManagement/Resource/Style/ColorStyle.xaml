@@ -1,0 +1,12 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+
+    <SolidColorBrush x:Key="MainColor" Color="#313A46" />
+    <SolidColorBrush x:Key="TextColor" Color="#6A7885" />
+    <SolidColorBrush x:Key="FocusTextColor" Color="white" />
+
+    <Color x:Key="ThemeWhiteColor">White</Color>
+    <Color x:Key="ThemeBlackColor">Black</Color>
+    
+</ResourceDictionary>
