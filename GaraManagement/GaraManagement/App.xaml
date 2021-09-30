@@ -11,11 +11,11 @@
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.DeepPurple.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Lime.xaml" />
                 <ResourceDictionary Source="/Resource/MainResource.xaml"></ResourceDictionary>
-                <ResourceDictionary Source="/Resource/Style/ButtonStyle.xaml"></ResourceDictionary>
                 <ResourceDictionary Source="/Resource/Style/ColorStyle.xaml"></ResourceDictionary>
                 <ResourceDictionary Source="/Resource/Style/ScrollBarStyle.xaml"></ResourceDictionary>
                 <ResourceDictionary Source="/Resource/Style/TextStyle.xaml"></ResourceDictionary>
                 <ResourceDictionary Source="/Resource/Template/BillTemplate.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="/Resource/Style/ButtonStyle.xaml"></ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

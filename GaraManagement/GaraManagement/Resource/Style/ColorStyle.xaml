@@ -3,6 +3,7 @@
 
 
     <SolidColorBrush x:Key="MainColor" Color="#313A46" />
+    <SolidColorBrush x:Key="FocusItemButtonColor" Color="#3D4856" />
     <SolidColorBrush x:Key="TextColor" Color="#6A7885" />
     <SolidColorBrush x:Key="FocusTextColor" Color="white" />
 

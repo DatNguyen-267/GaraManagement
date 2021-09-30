@@ -5,25 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GaraManagement"
         mc:Ignorable="d"
-        Title="MainWindow" Height="700" Width="500"
+        Title="MainWindow" Height="800" Width="500"
+        WindowStartupLocation="CenterScreen"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes">
     <Window.Resources>
         <Style TargetType="{x:Type Expander}" BasedOn="{StaticResource MaterialDesignExpander}">
-            <Setter Property="Background" Value="Transparent"></Setter>
+            <Setter Property="Background" Value="{StaticResource MainColor}"></Setter>
             <Setter Property="TextBlock.Foreground" Value="{StaticResource TextColor}"></Setter>
             <Setter Property="TextBlock.FontWeight" Value="DemiBold"></Setter>
-            <Setter Property="TextBlock.FontSize" Value="14"></Setter>
-        </Style>
-        <Style x:Key="ItemMenuButton" TargetType="{x:Type Button}" BasedOn="{StaticResource MaterialDesignRaisedButton}">
-            <Setter Property="Background" Value="Transparent"></Setter>
-            <Setter Property="BorderBrush" Value="Transparent"></Setter>
-            <Setter Property="BorderThickness" Value="0"></Setter>
-            <Setter Property="VerticalAlignment" Value="Stretch"></Setter>
-            <Setter Property="HorizontalAlignment" Value="Stretch"></Setter>
-            <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
-            <Setter Property="HorizontalContentAlignment" Value="Left"></Setter>
-            <Setter Property="Padding" Value="58 0 0 0"></Setter>
-            <Setter Property="Foreground" Value="{StaticResource TextColor}"></Setter>
+            <Setter Property="TextBlock.FontSize" Value="13"></Setter>
         </Style>
         <!--<Style TargetType="{x:Type TextBlock}">
             <Setter Property="VerticalAlignment" Value="Center"></Setter>
@@ -40,6 +30,9 @@
                 <Style TargetType="{x:Type TextBlock}">
                     <Setter Property="VerticalAlignment" Value="Center"></Setter>
                 </Style>
+                <Style x:Key="MenuButton" TargetType="{x:Type Button}">
+                    
+                </Style>
             </Grid.Resources>
             <Grid.RowDefinitions>
                 <RowDefinition Height="100"></RowDefinition>
@@ -49,26 +42,25 @@
             <ScrollViewer Grid.Row="1"
                 VerticalScrollBarVisibility="Auto" 
                 HorizontalScrollBarVisibility="Disabled" 
-                VerticalAlignment="Top"
-                MaxHeight="560">
+                >
                 <StackPanel>
-                    <Button x:Name="btnHome" ToolTip="Trang chủ" Uid="0">
+                    <Button Style="{StaticResource MButton}">
                         <!--Placed a trigger-->
                         <StackPanel Orientation="Horizontal"
-                                    VerticalAlignment="Stretch"
-                                    HorizontalAlignment="Stretch">
+                                    Background="Transparent">
                             <materialDesign:PackIcon
                                 Kind="HomeOutline"
                                 VerticalAlignment="Center" 
                                 Width="24"
-                                Height="24"/>
+                                Height="24"
+                                Background="Transparent"/>
                             <TextBlock 
                                 Text="Trang chủ"
-                                FontSize="18"
-                                Margin="10,0,0,0"/>
+                                Margin="10,0,0,0"
+                                Background="Transparent"/>
                         </StackPanel>
                     </Button>
-                    <Expander x:Name="expStore"
+                    <Expander x:Name="exQuanLyXe"
                         VerticalAlignment="Top" 
                         Margin="0,0,0,5">
                         <Expander.Header>
@@ -80,27 +72,66 @@
                                     Width="24"
                                     Height="24"/>
                                 <TextBlock
-                                    Text="Dịch vụ"
+                                    Text="Gara"
                                     Margin="10,0,0,0" />
                             </StackPanel>
                         </Expander.Header>
                         <StackPanel>
                             <Button 
                                 Style="{StaticResource ItemMenuButton}"
-                                x:Name="btnStore"
-                                Uid="10"
-                                Content="Bán hàng"
-                                ToolTip="Tạo phiếu bán hàng">
+                                Content="Tiếp nhận xe">
                                 <!--Placed a trigger-->
                             </Button>
                             <Button 
-                                Style="{StaticResource ItemMenuButton}"
-                                x:Name="btnService"
-                                Uid="11"
-                                Content="Dịch vụ"
-                                ToolTip="Tạo phiếu dịch vụ">
+                                Style="{StaticResource ItemMenuButton}"                
+                                Content="Quản lý hiệu xe">
                                 <!--Placed a trigger-->
                             </Button>
+                            <Button 
+                                Style="{StaticResource ItemMenuButton}"                
+                                Content="Thanh toán">
+                                <!--Placed a trigger-->
+                            </Button>
+                            <Button 
+                                Style="{StaticResource ItemMenuButton}"                
+                                Content="Lịch sử tiếp nhận">
+                                <!--Placed a trigger-->
+                            </Button>
+                        </StackPanel>
+                    </Expander>
+                    <Expander 
+                        VerticalAlignment="Top" 
+                        Margin="0,0,0,5">
+                        <Expander.Header>
+                            <StackPanel 
+                                Orientation="Horizontal">
+                                <materialDesign:PackIcon
+                                    Kind="StoreOutline"
+                                    VerticalAlignment="Center" 
+                                    Width="24"
+                                    Height="24"/>
+                                <TextBlock
+                                    Text="Sửa chữa"
+                                    Margin="10,0,0,0" />
+                            </StackPanel>
+                        </Expander.Header>
+                        <StackPanel>
+                            <Button 
+                                Style="{StaticResource ItemMenuButton}"
+                                Content="Quản lý sửa chữa">
+                                <!--Placed a trigger-->
+                            </Button>
+                            <Button 
+                                Style="{StaticResource ItemMenuButton}"                
+                                Content="Quản lý tiền công">
+                                <!--Placed a trigger-->
+                            </Button>
+                            <Button 
+                                Style="{StaticResource ItemMenuButton}"                
+                                Content="Danh sách hợp đồng">
+                                <!--Placed a trigger-->
+                            </Button>
+
                         </StackPanel>
                     </Expander>
                     <Expander 
@@ -109,7 +140,8 @@
                         Margin="0,0,0,5" 
                         >
                         <Expander.Header>
-                            <StackPanel 
+                            <StackPanel
+                                
                                 Orientation="Horizontal" >
                                 <materialDesign:PackIcon
                                     Kind="Warehouse"
@@ -117,25 +149,24 @@
                                     Width="24"
                                     Height="24"/>
                                 <TextBlock
-                                    Text="Kho hàng"
+                                    Text="Vật tư"
                                     Margin="10,0,0,0" />
                             </StackPanel>
                         </Expander.Header>
                         <StackPanel>
-                            <Button
+                            <Button 
                                 Style="{StaticResource ItemMenuButton}"
-                                x:Name="btnStock"
-                                Uid="20"
-                                Content="Tồn kho"
-                                ToolTip="Quản lý tồn kho">
+                                Content="Danh sách vật tư">
                                 <!--Placed a trigger-->
                             </Button>
-                            <Button
+                            <Button 
                                 Style="{StaticResource ItemMenuButton}"
-                                x:Name="btnImport"
-                                Uid="21"
-                                Content="Phiếu nhập kho"
-                                ToolTip="Quản lý phiếu nhập kho">
+                                Content="Quản lý nhập kho">
+                                <!--Placed a trigger-->
+                            </Button>
+                            <Button 
+                                Style="{StaticResource ItemMenuButton}"
+                                Content="Quản lý xuất kho">
                                 <!--Placed a trigger-->
                             </Button>
                         </StackPanel>
@@ -154,23 +185,24 @@
                                     Height="24"/>
                                 <TextBlock
                                    
-                                    Text="Đối tác"
+                                    Text="Khách hàng"
                                     Margin="10,0,0,0" />
                             </StackPanel>
                         </Expander.Header>
                         <StackPanel>
-                            <Button
-                                x:Name="btnSupplier"
-                                Uid="30"
-                                Content="Nhà cung cấp" 
-                                ToolTip="Quản lý nhà cung cấp">
+                            <Button 
+                                Style="{StaticResource ItemMenuButton}"
+                                Content="Danh sách khách hàng">
                                 <!--Placed a trigger-->
                             </Button>
-                            <Button
-                                x:Name="btnCustomer"
-                                Uid="31"
-                                Content="Khách hàng"
-                                ToolTip="Quản lý khách hàng">
+                            <Button 
+                                Style="{StaticResource ItemMenuButton}"
+                                Content="Quản lý công nợ">
+                                <!--Placed a trigger-->
+                            </Button>
+                            <Button 
+                                Style="{StaticResource ItemMenuButton}"
+                                Content="Lịch sử điểm thưởng">
                                 <!--Placed a trigger-->
                             </Button>
                         </StackPanel>
@@ -188,30 +220,29 @@
                                     Width="24"
                                     Height="24"/>
                                 <TextBlock
-                                    Text="Quản lý"
+                                    Text="Nhân viên"
                                     Margin="10,0,0,0" />
                             </StackPanel>
                         </Expander.Header>
                         <StackPanel>
-                            <Button
-                                x:Name="btnEmployee"
-                                Uid="40"
-                                Content="Nhân viên" 
-                                ToolTip="Quản lý nhân viên">
+                            <Button 
+                                Style="{StaticResource ItemMenuButton}"
+                                Content="Danh sách nhân viên">
                                 <!--Placed a trigger-->
                             </Button>
-                            <Button
-                                x:Name="btnGoods"
-                                Uid="41"
-                                Content="Hàng hóa"
-                                ToolTip="Quản lý hàng hóa">
+                            <Button 
+                                Style="{StaticResource ItemMenuButton}"
+                                Content="Phân quyền">
                                 <!--Placed a trigger-->
                             </Button>
-                            <Button
-                                x:Name="btnServiceM"
-                                Uid="42"
-                                Content="Dịch vụ"
-                                ToolTip="Quản lý dịch vụ">
+                            <Button 
+                                Style="{StaticResource ItemMenuButton}"
+                                Content="Thông tin lương">
+                                <!--Placed a trigger-->
+                            </Button>
+                            <Button 
+                                Style="{StaticResource ItemMenuButton}"
+                                Content="Thông tin vi phạm">
                                 <!--Placed a trigger-->
                             </Button>
                         </StackPanel>
@@ -234,41 +265,47 @@
                             </StackPanel>
                         </Expander.Header>
                         <StackPanel>
-                            <Button
-                                x:Name="btnBillService"
-                                Uid="50"
-                                Content="Phiếu dịch vụ"
-                                ToolTip="Xem phiếu dịch vụ">
+                            <Button 
+                                Style="{StaticResource ItemMenuButton}"
+                                Content="Báo cáo tồn">
                                 <!--Placed a trigger-->
                             </Button>
-                            <Button
-                                x:Name="btnRevenue"
-                                Uid="51"
-                                Content="Hóa đơn"
-                                ToolTip="Xem phiếu hóa đơn">
+                            <Button 
+                                Style="{StaticResource ItemMenuButton}"
+                                Content="Báo cáo doanh số">
                                 <!--Placed a trigger-->
                             </Button>
                         </StackPanel>
                     </Expander>
-                    <Button
-                        x:Name="btnSetting"
-                        Uid="6"
-                        ToolTip="Cài đặt"
-                        Padding="24,0,0,0"
+                    <Expander 
+                        VerticalAlignment="Top" 
                         Margin="0,0,0,5" >
-                        <!--Placed a trigger-->
-                        <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon
-                                Kind="CogOutline"
-                                VerticalAlignment="Center" 
-                                Width="24"
-                                Height="24"/>
-                            <TextBlock 
-                                Text="Cài đặt"
-                                FontSize="18"
-                                Margin="10,0,0,0"/>
+                        <Expander.Header>
+                            <StackPanel 
+                                Orientation="Horizontal" >
+                                <materialDesign:PackIcon
+                                    Kind="CogBox"
+                                    VerticalAlignment="Center" 
+                                    Width="24"
+                                    Height="24"/>
+                                <TextBlock
+                                    Text="Tùy chọn"
+                                    Margin="10,0,0,0" />
+                            </StackPanel>
+                        </Expander.Header>
+                        <StackPanel>
+                            <Button 
+                                Style="{StaticResource ItemMenuButton}"
+                                Content="Thông tin chung">
+                                <!--Placed a trigger-->
+                            </Button>
+                            <Button 
+                                Style="{StaticResource ItemMenuButton}"
+                                Content="Quy định Gara">
+                                <!--Placed a trigger-->
+                            </Button>
                         </StackPanel>
-                    </Button>
+                    </Expander>
                 </StackPanel>
             </ScrollViewer>
         </Grid>
