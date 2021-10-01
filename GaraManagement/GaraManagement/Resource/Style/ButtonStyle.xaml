@@ -22,6 +22,7 @@
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
                 <Setter Property="Background" Value="{StaticResource FocusItemButtonColor}"></Setter>
+                <Setter Property="Foreground" Value="{StaticResource FocusTextColor}"></Setter>
             </Trigger>
         </Style.Triggers>
     </Style>

@@ -18,10 +18,11 @@
         <!--<Style TargetType="{x:Type TextBlock}">
             <Setter Property="VerticalAlignment" Value="Center"></Setter>
         </Style>-->
+        
     </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="200"></ColumnDefinition>
+            <ColumnDefinition Width="250"></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
         
@@ -38,11 +39,27 @@
                 <RowDefinition Height="100"></RowDefinition>
                 <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
-            <Grid Grid.Row="0"></Grid>
+            <Grid Grid.Row="0">
+                <StackPanel Orientation="Horizontal"
+                            Margin="20 0 0 0">
+                    <Image Source="./Resource/Image/green_gara.png"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center"
+                           Height="40"
+                          ></Image> 
+                    <TextBlock Text="DGara"
+                               FontSize="30"
+                               FontWeight="ExtraBold"
+                               Foreground="{StaticResource LogoTextColor}"
+                               Margin="10 7 0 0 "></TextBlock>
+                </StackPanel>
+                
+                
+            </Grid>
             <ScrollViewer Grid.Row="1"
                 VerticalScrollBarVisibility="Auto" 
-                HorizontalScrollBarVisibility="Disabled" 
-                >
+                HorizontalScrollBarVisibility="Disabled"
+                        Style="{StaticResource ScrollViewerCustom}">
                 <StackPanel>
                     <Button Style="{StaticResource MButton}">
                         <!--Placed a trigger-->
@@ -308,6 +325,10 @@
                     </Expander>
                 </StackPanel>
             </ScrollViewer>
+        </Grid>
+
+        <Grid Grid.Column="1" Background="{StaticResource BackGround}">
+            
         </Grid>
     </Grid>
 </Window>
