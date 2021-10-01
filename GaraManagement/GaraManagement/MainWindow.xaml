@@ -1,0 +1,334 @@
+﻿<Window x:Class="GaraManagement.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GaraManagement"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="800" Width="500"
+        WindowStartupLocation="CenterScreen"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes">
+    <Window.Resources>
+        <Style TargetType="{x:Type Expander}" BasedOn="{StaticResource MaterialDesignExpander}">
+            <Setter Property="Background" Value="{StaticResource MainColor}"></Setter>
+            <Setter Property="TextBlock.Foreground" Value="{StaticResource TextColor}"></Setter>
+            <Setter Property="TextBlock.FontWeight" Value="DemiBold"></Setter>
+            <Setter Property="TextBlock.FontSize" Value="13"></Setter>
+        </Style>
+        <!--<Style TargetType="{x:Type TextBlock}">
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+        </Style>-->
+        
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        
+        <Grid Grid.Column="0" Background="{StaticResource MainColor}">
+            <Grid.Resources>
+                <Style TargetType="{x:Type TextBlock}">
+                    <Setter Property="VerticalAlignment" Value="Center"></Setter>
+                </Style>
+                <Style x:Key="MenuButton" TargetType="{x:Type Button}">
+                    
+                </Style>
+            </Grid.Resources>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <StackPanel Orientation="Horizontal"
+                            Margin="20 0 0 0">
+                    <Image Source="./Resource/Image/green_gara.png"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center"
+                           Height="40"
+                          ></Image> 
+                    <TextBlock Text="DGara"
+                               FontSize="30"
+                               FontWeight="ExtraBold"
+                               Foreground="{StaticResource LogoTextColor}"
+                               Margin="10 7 0 0 "></TextBlock>
+                </StackPanel>
+                
+                
+            </Grid>
+            <ScrollViewer Grid.Row="1"
+                VerticalScrollBarVisibility="Auto" 
+                HorizontalScrollBarVisibility="Disabled"
+                        Style="{StaticResource ScrollViewerCustom}">
+                <StackPanel>
+                    <Button Style="{StaticResource MButton}">
+                        <!--Placed a trigger-->
+                        <StackPanel Orientation="Horizontal"
+                                    Background="Transparent">
+                            <materialDesign:PackIcon
+                                Kind="HomeOutline"
+                                VerticalAlignment="Center" 
+                                Width="24"
+                                Height="24"
+                                Background="Transparent"/>
+                            <TextBlock 
+                                Text="Trang chủ"
+                                Margin="10,0,0,0"
+                                Background="Transparent"/>
+                        </StackPanel>
+                    </Button>
+                    <Expander x:Name="exQuanLyXe"
+                        VerticalAlignment="Top" 
+                        Margin="0,0,0,5">
+                        <Expander.Header>
+                            <StackPanel 
+                                Orientation="Horizontal">
+                                <materialDesign:PackIcon
+                                    Kind="StoreOutline"
+                                    VerticalAlignment="Center" 
+                                    Width="24"
+                                    Height="24"/>
+                                <TextBlock
+                                    Text="Gara"
+                                    Margin="10,0,0,0" />
+                            </StackPanel>
+                        </Expander.Header>
+                        <StackPanel>
+                            <Button 
+                                Style="{StaticResource ItemMenuButton}"
+                                Content="Tiếp nhận xe">
+                                <!--Placed a trigger-->
+                            </Button>
+                            <Button 
+                                Style="{StaticResource ItemMenuButton}"                
+                                Content="Quản lý hiệu xe">
+                                <!--Placed a trigger-->
+                            </Button>
+                            <Button 
+                                Style="{StaticResource ItemMenuButton}"                
+                                Content="Thanh toán">
+                                <!--Placed a trigger-->
+                            </Button>
+                            <Button 
+                                Style="{StaticResource ItemMenuButton}"                
+                                Content="Lịch sử tiếp nhận">
+                                <!--Placed a trigger-->
+                            </Button>
+                        </StackPanel>
+                    </Expander>
+                    <Expander 
+                        VerticalAlignment="Top" 
+                        Margin="0,0,0,5">
+                        <Expander.Header>
+                            <StackPanel 
+                                Orientation="Horizontal">
+                                <materialDesign:PackIcon
+                                    Kind="StoreOutline"
+                                    VerticalAlignment="Center" 
+                                    Width="24"
+                                    Height="24"/>
+                                <TextBlock
+                                    Text="Sửa chữa"
+                                    Margin="10,0,0,0" />
+                            </StackPanel>
+                        </Expander.Header>
+                        <StackPanel>
+                            <Button 
+                                Style="{StaticResource ItemMenuButton}"
+                                Content="Quản lý sửa chữa">
+                                <!--Placed a trigger-->
+                            </Button>
+                            <Button 
+                                Style="{StaticResource ItemMenuButton}"                
+                                Content="Quản lý tiền công">
+                                <!--Placed a trigger-->
+                            </Button>
+                            <Button 
+                                Style="{StaticResource ItemMenuButton}"                
+                                Content="Danh sách hợp đồng">
+                                <!--Placed a trigger-->
+                            </Button>
+
+                        </StackPanel>
+                    </Expander>
+                    <Expander 
+                        x:Name="expWarehouse"
+                        VerticalAlignment="Top" 
+                        Margin="0,0,0,5" 
+                        >
+                        <Expander.Header>
+                            <StackPanel
+                                
+                                Orientation="Horizontal" >
+                                <materialDesign:PackIcon
+                                    Kind="Warehouse"
+                                    VerticalAlignment="Center" 
+                                    Width="24"
+                                    Height="24"/>
+                                <TextBlock
+                                    Text="Vật tư"
+                                    Margin="10,0,0,0" />
+                            </StackPanel>
+                        </Expander.Header>
+                        <StackPanel>
+                            <Button 
+                                Style="{StaticResource ItemMenuButton}"
+                                Content="Danh sách vật tư">
+                                <!--Placed a trigger-->
+                            </Button>
+                            <Button 
+                                Style="{StaticResource ItemMenuButton}"
+                                Content="Quản lý nhập kho">
+                                <!--Placed a trigger-->
+                            </Button>
+                            <Button 
+                                Style="{StaticResource ItemMenuButton}"
+                                Content="Quản lý xuất kho">
+                                <!--Placed a trigger-->
+                            </Button>
+                        </StackPanel>
+                    </Expander>
+                    <Expander 
+                        x:Name="expPartner"
+                        VerticalAlignment="Top" 
+                        Margin="0,0,0,5"  >
+                        <Expander.Header>
+                            <StackPanel 
+                                Orientation="Horizontal" >
+                                <materialDesign:PackIcon
+                                    Kind="AccountGroupOutline"
+                                    VerticalAlignment="Center" 
+                                    Width="24"
+                                    Height="24"/>
+                                <TextBlock
+                                   
+                                    Text="Khách hàng"
+                                    Margin="10,0,0,0" />
+                            </StackPanel>
+                        </Expander.Header>
+                        <StackPanel>
+                            <Button 
+                                Style="{StaticResource ItemMenuButton}"
+                                Content="Danh sách khách hàng">
+                                <!--Placed a trigger-->
+                            </Button>
+                            <Button 
+                                Style="{StaticResource ItemMenuButton}"
+                                Content="Quản lý công nợ">
+                                <!--Placed a trigger-->
+                            </Button>
+                            <Button 
+                                Style="{StaticResource ItemMenuButton}"
+                                Content="Lịch sử điểm thưởng">
+                                <!--Placed a trigger-->
+                            </Button>
+                        </StackPanel>
+                    </Expander>
+                    <Expander 
+                        x:Name="expManage"
+                        VerticalAlignment="Top" 
+                        Margin="0,0,0,5" >
+                        <Expander.Header>
+                            <StackPanel 
+                                Orientation="Horizontal" >
+                                <materialDesign:PackIcon
+                                    Kind="Hubspot"
+                                    VerticalAlignment="Center" 
+                                    Width="24"
+                                    Height="24"/>
+                                <TextBlock
+                                    Text="Nhân viên"
+                                    Margin="10,0,0,0" />
+                            </StackPanel>
+                        </Expander.Header>
+                        <StackPanel>
+                            <Button 
+                                Style="{StaticResource ItemMenuButton}"
+                                Content="Danh sách nhân viên">
+                                <!--Placed a trigger-->
+                            </Button>
+                            <Button 
+                                Style="{StaticResource ItemMenuButton}"
+                                Content="Phân quyền">
+                                <!--Placed a trigger-->
+                            </Button>
+                            <Button 
+                                Style="{StaticResource ItemMenuButton}"
+                                Content="Thông tin lương">
+                                <!--Placed a trigger-->
+                            </Button>
+                            <Button 
+                                Style="{StaticResource ItemMenuButton}"
+                                Content="Thông tin vi phạm">
+                                <!--Placed a trigger-->
+                            </Button>
+                        </StackPanel>
+                    </Expander>
+                    <Expander 
+                        x:Name="expReport"
+                        VerticalAlignment="Top" 
+                        Margin="0,0,0,5" >
+                        <Expander.Header>
+                            <StackPanel 
+                                Orientation="Horizontal" >
+                                <materialDesign:PackIcon
+                                    Kind="FileChartOutline"
+                                    VerticalAlignment="Center" 
+                                    Width="24"
+                                    Height="24"/>
+                                <TextBlock
+                                    Text="Báo cáo"
+                                    Margin="10,0,0,0" />
+                            </StackPanel>
+                        </Expander.Header>
+                        <StackPanel>
+                            <Button 
+                                Style="{StaticResource ItemMenuButton}"
+                                Content="Báo cáo tồn">
+                                <!--Placed a trigger-->
+                            </Button>
+                            <Button 
+                                Style="{StaticResource ItemMenuButton}"
+                                Content="Báo cáo doanh số">
+                                <!--Placed a trigger-->
+                            </Button>
+                        </StackPanel>
+                    </Expander>
+                    <Expander 
+                        VerticalAlignment="Top" 
+                        Margin="0,0,0,5" >
+                        <Expander.Header>
+                            <StackPanel 
+                                Orientation="Horizontal" >
+                                <materialDesign:PackIcon
+                                    Kind="CogBox"
+                                    VerticalAlignment="Center" 
+                                    Width="24"
+                                    Height="24"/>
+                                <TextBlock
+                                    Text="Tùy chọn"
+                                    Margin="10,0,0,0" />
+                            </StackPanel>
+                        </Expander.Header>
+                        <StackPanel>
+                            <Button 
+                                Style="{StaticResource ItemMenuButton}"
+                                Content="Thông tin chung">
+                                <!--Placed a trigger-->
+                            </Button>
+                            <Button 
+                                Style="{StaticResource ItemMenuButton}"
+                                Content="Quy định Gara">
+                                <!--Placed a trigger-->
+                            </Button>
+                        </StackPanel>
+                    </Expander>
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+
+        <Grid Grid.Column="1" Background="{StaticResource BackGround}">
+            
+        </Grid>
+    </Grid>
+</Window>

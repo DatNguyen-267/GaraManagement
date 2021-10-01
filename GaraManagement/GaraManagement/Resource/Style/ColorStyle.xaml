@@ -1,0 +1,25 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+
+    <SolidColorBrush x:Key="MainColor" Color="White" />
+    <SolidColorBrush x:Key="TextColor" Color="#6A7885" />
+    <SolidColorBrush x:Key="FocusTextColor" Color="white" />
+    <SolidColorBrush x:Key="FocusItemButtonColor" Color="#3D4856" />
+    <SolidColorBrush x:Key="BackGround" Color="#F5F7FA" />
+    <SolidColorBrush x:Key="ScrollBarColor" Color="Gray" />
+    <SolidColorBrush x:Key="LogoTextColor" Color="#41D69E" />
+    <!--Tông màu 1-->
+
+
+    <!--Tông màu 2-->
+    
+    <SolidColorBrush x:Key="Green1" Color="#42D79E" />
+
+    <!--Tông màu 3-->
+    
+    
+    <Color x:Key="ThemeWhiteColor">White</Color>
+    <Color x:Key="ThemeBlackColor">Black</Color>
+    
+</ResourceDictionary>
