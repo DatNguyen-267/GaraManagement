@@ -63,6 +63,20 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ViewModel\BaseViewModel.cs" />
+    <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="View\Gara\CarBrand_Manager.xaml.cs">
+      <DependentUpon>CarBrand_Manager.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Gara\History_Reception.xaml.cs">
+      <DependentUpon>History_Reception.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Gara\Payment_Manager.xaml.cs">
+      <DependentUpon>Payment_Manager.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Gara\Reception_Manager.xaml.cs">
+      <DependentUpon>Reception_Manager.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -99,6 +113,22 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\Gara\CarBrand_Manager.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Gara\History_Reception.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Gara\Payment_Manager.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Gara\Reception_Manager.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -129,8 +159,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Model\" />
-    <Folder Include="ViewModel\" />
-    <Folder Include="View\" />
+    <Folder Include="View\Customer\" />
+    <Folder Include="View\Regulation\" />
+    <Folder Include="View\Repair\" />
+    <Folder Include="View\Report\" />
+    <Folder Include="View\Staff\" />
+    <Folder Include="View\Supplies\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resource\Image\gara.png" />
