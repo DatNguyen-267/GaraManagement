@@ -3,21 +3,63 @@
 
 
     <SolidColorBrush x:Key="MainColor" Color="White" />
-    <SolidColorBrush x:Key="TextColor" Color="#6A7885" />
+    <SolidColorBrush x:Key="TextColor" Color="#6A7885" /> 
+    <SolidColorBrush x:Key="TextColor2" Color="#707088" /> 
+    <SolidColorBrush x:Key="NormalTextColor" Color="#333333" />
     <SolidColorBrush x:Key="FocusTextColor" Color="white" />
     <SolidColorBrush x:Key="FocusItemButtonColor" Color="#3D4856" />
     <SolidColorBrush x:Key="BackGround" Color="#F5F7FA" />
     <SolidColorBrush x:Key="ScrollBarColor" Color="Gray" />
     <SolidColorBrush x:Key="LogoTextColor" Color="#41D69E" />
-    <!--Tông màu 1-->
+    <SolidColorBrush x:Key="CardColor" Color="White" />
 
 
-    <!--Tông màu 2-->
-    
-    <SolidColorBrush x:Key="Green1" Color="#42D79E" />
+    <!--Tông màu đen -->
+    <SolidColorBrush x:Key="Black1" Color="#000000" />
+    <SolidColorBrush x:Key="Black2" Color="#1a1a1a" />
+    <SolidColorBrush x:Key="Black3" Color="#333333" />
+    <SolidColorBrush x:Key="Black4" Color="#404040" />
+    <SolidColorBrush x:Key="Black5" Color="#4d4d4d" />
+    <SolidColorBrush x:Key="Black6" Color="#595959" />
+    <SolidColorBrush x:Key="Black7" Color="#666666" />
+    <SolidColorBrush x:Key="Black8" Color="#737373" />
+    <SolidColorBrush x:Key="Black9" Color="#808080" />
+    <SolidColorBrush x:Key="Black10" Color="#8c8c8c" />
+    <SolidColorBrush x:Key="Black11" Color="#999999" />
+    <SolidColorBrush x:Key="Black12" Color="#a6a6a6" />
+    <SolidColorBrush x:Key="Black13" Color="#b3b3b3" />
+    <SolidColorBrush x:Key="Black14" Color="#bfbfbf" />
+    <SolidColorBrush x:Key="Black15" Color="#cccccc" />
 
-    <!--Tông màu 3-->
-    
+    <!--Tông màu xanh lá-->
+    <SolidColorBrush x:Key="Green0" Color="#42D79E" />
+    <SolidColorBrush x:Key="Green1" Color="#008000" />
+    <SolidColorBrush x:Key="Green2" Color="#009900" />
+    <SolidColorBrush x:Key="Green3" Color="#00b300" />
+    <SolidColorBrush x:Key="Green4" Color="#00cc00" />
+    <SolidColorBrush x:Key="Green5" Color="#00e600" />
+    <SolidColorBrush x:Key="Green6" Color="#00ff00" />
+    <SolidColorBrush x:Key="Green7" Color="#1aff1a" />
+    <SolidColorBrush x:Key="Green8" Color="#33ff33" />
+    <SolidColorBrush x:Key="Green9" Color="#4dff4d" />
+    <SolidColorBrush x:Key="Green10" Color="#66ff66" />
+    <SolidColorBrush x:Key="Green11" Color="#80ff80" />
+    <SolidColorBrush x:Key="Green12" Color="#99ff99" />
+
+
+    <!--Tông màu xanh dương-->
+    <SolidColorBrush x:Key="Blue0" Color="#1ab2ff" />
+    <SolidColorBrush x:Key="Blue1" Color="#00aaff" />
+    <SolidColorBrush x:Key="Blue2" Color="#33bbff" />
+    <SolidColorBrush x:Key="Blue3" Color="#66ccff" />
+    <SolidColorBrush x:Key="Blue4" Color="#99ddff" />
+
+    <SolidColorBrush x:Key="Blue5" Color="#1a75ff" />
+    <SolidColorBrush x:Key="Blue6" Color="#3385ff" />
+    <SolidColorBrush x:Key="Blue7" Color="#66a3ff" />
+    <SolidColorBrush x:Key="Blue8" Color="#99c2ff" />
+    <SolidColorBrush x:Key="Blue9" Color="#4dff4d" />
+
     
     <Color x:Key="ThemeWhiteColor">White</Color>
     <Color x:Key="ThemeBlackColor">Black</Color>

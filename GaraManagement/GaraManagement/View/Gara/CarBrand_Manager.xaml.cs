@@ -1,5 +1,4 @@
-﻿using GaraManagement.ViewModel;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,18 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace GaraManagement
+namespace GaraManagement.View.Gara
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for CarBrand_Manager.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class CarBrand_Manager : UserControl
     {
-        public MainViewModel mainViewModel { get; set; }
-        public MainWindow()
+        public CarBrand_Manager()
         {
             InitializeComponent();
-            this.DataContext = mainViewModel = new MainViewModel(this);
         }
     }
 }

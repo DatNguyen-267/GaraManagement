@@ -5,9 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GaraManagement"
         mc:Ignorable="d"
-        Title="MainWindow" Height="800" Width="500"
+        Title="DGara" Height="800" Width="1000"
         WindowStartupLocation="CenterScreen"
-        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes">
+        WindowState="Maximized"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Background="{StaticResource MainColor}">
     <Window.Resources>
         <Style TargetType="{x:Type Expander}" BasedOn="{StaticResource MaterialDesignExpander}">
             <Setter Property="Background" Value="{StaticResource MainColor}"></Setter>
@@ -95,6 +97,7 @@
                         </Expander.Header>
                         <StackPanel>
                             <Button 
+                                Command="{Binding ReceptionManager_Command}"
                                 Style="{StaticResource ItemMenuButton}"
                                 Content="Tiếp nhận xe">
                                 <!--Placed a trigger-->
@@ -327,8 +330,17 @@
             </ScrollViewer>
         </Grid>
 
-        <Grid Grid.Column="1" Background="{StaticResource BackGround}">
-            
-        </Grid>
+        <Border Grid.Column="1" Background="{StaticResource BackGround}"
+                BorderBrush="{StaticResource BackGround}"
+                CornerRadius="10 0 0 10"
+                Padding="5 5 0 5"
+                >
+            <Grid x:Name="Container" VerticalAlignment="Stretch"
+                  HorizontalAlignment="Stretch">
+                <TextBlock Text="{Binding text}"
+                       FontSize="50"></TextBlock>
+            </Grid>
+        </Border>
+       
     </Grid>
 </Window>
